@@ -9,7 +9,7 @@ export type RedisConfig = {
 }
 
 export const redisConfig: RedisConfig = {
-  useLocalRedis: process.env.USE_LOCAL_REDIS === 'true',
+  useLocalRedis: process.env.USE_LOCAL_REDIS === 'false',
   upstashRedisRestUrl: process.env.UPSTASH_REDIS_REST_URL,
   upstashRedisRestToken: process.env.UPSTASH_REDIS_REST_TOKEN,
   localRedisUrl: process.env.LOCAL_REDIS_URL || 'redis://localhost:6379'

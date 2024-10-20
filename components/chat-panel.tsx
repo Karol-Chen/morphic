@@ -127,9 +127,11 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
   return (
     <div
       className={
-        'fixed bottom-8 left-0 right-0 top-10 mx-auto h-screen flex flex-col items-center justify-center'
+        'fixed bottom-0 left-80 right-0 top-60 mx-auto h-screen flex flex-col items-center justify-center'
       }
     >
+      {/* <img src="logoblack.png" alt="Tradely Logo" className="w-1/5 h-1/5 object-contain mx-auto ml-0 mt-4 dark:block" /> */}
+      <img src="logoblack.png" alt="Tradely Logo" className="w-2/5 mb-80" />
       <form onSubmit={handleSubmit} className="max-w-2xl w-full px-6">
         <div className="relative flex items-center w-full">
           <Textarea
@@ -183,7 +185,7 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
               inputRef.current.style.borderRadius =
                 Math.max(8, newBorder) + 'px'
             }}
-            onFocus={() => setShowEmptyScreen(true)}
+            // onFocus={() => setShowEmptyScreen(true)}
             onBlur={() => setShowEmptyScreen(false)}
           />
           <Button

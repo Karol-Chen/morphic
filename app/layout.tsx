@@ -8,6 +8,9 @@ import Footer from '@/components/footer'
 import { Sidebar } from '@/components/sidebar'
 import { Toaster } from '@/components/ui/sonner'
 import { AppStateProvider } from '@/lib/utils/app-state'
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
+import { SidebarDesktop } from '@/components/sidebar/sidebar-desktop'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -48,19 +51,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-sans antialiased', fontSans.variable)}>
+      <body         
+        className={cn(
+          'font-sans antialiased',
+          GeistSans.variable,
+          GeistMono.variable
+        )}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
           <AppStateProvider>
             <Header />
-            {children}
-            <Sidebar />
-            <Footer />
-            <Toaster />
+            <div className="flex flex-col min-h-screen">
+              <SidebarDesktop />
+              <main className="flex flex-col flex-1 bg-muted/50">{children}</main>
+            </div>
+            {/* <Sidebar /> */}
+            {/* <Footer /> */}
+            {/* <Toaster /> */}
           </AppStateProvider>
         </ThemeProvider>
       </body>

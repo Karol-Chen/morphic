@@ -31,7 +31,7 @@ let redisClient: Redis | ReturnType<typeof createClient> | null = null
 async function initializeRedisClient() {
   if (redisClient) return redisClient
 
-  const useLocalRedis = process.env.USE_LOCAL_REDIS === 'true'
+  const useLocalRedis = process.env.USE_LOCAL_REDIS === 'false'
 
   if (useLocalRedis) {
     const localRedisUrl =
