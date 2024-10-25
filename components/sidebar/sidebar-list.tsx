@@ -4,7 +4,7 @@ import { ClearHistory } from '@/components/clear-history'
 // import { ThemeToggle } from '@/components/theme-toggle'
 import { redirect } from 'next/navigation'
 import { cache } from 'react'
-// import { UserButton } from '@clerk/nextjs'
+import { UserButton } from '@clerk/nextjs'
 
 interface SidebarListProps {
   userId?: string
@@ -35,8 +35,8 @@ export async function SidebarList({ userId }: SidebarListProps) {
           )}
         </div>
         <div className="flex items-center justify-between p-4">
-          {/* <UserButton />
-          <ThemeToggle /> */}
+          <UserButton />
+          {/* <ThemeToggle /> */}
           {/* <ClearHistory clearChats={clearChats} isEnabled={chats?.length > 0} /> */}
         </div>
       </div>

@@ -20,6 +20,7 @@ import RetrieveSection from '@/components/retrieve-section'
 import { VideoSearchSection } from '@/components/video-search-section'
 import { AnswerSection } from '@/components/answer-section'
 import { workflow } from '@/lib/actions/workflow'
+import { redirect } from 'next/navigation'
 
 const MAX_MESSAGES = 6
 
@@ -299,4 +300,15 @@ export const getUIStateFromAIState = (aiState: Chat) => {
       }
     })
     .filter(message => message !== null) as UIState
+}
+
+export async function refreshHistory(path: string) {
+  redirect(path)
+}
+
+export async function getMissingKeys() {
+  const keysRequired: string[] = ['GROQ_API_KEY']
+  return keysRequired
+    .map(key => (process.env[key] ? '' : key))
+    .filter(key => key !== '')
 }

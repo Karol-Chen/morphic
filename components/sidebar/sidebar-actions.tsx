@@ -17,12 +17,13 @@ import {
 } from '@/components/ui/alert-dialog'
 import { Button } from '@/components/ui/button'
 import { IconShare, IconSpinner, IconTrash } from '@/components/ui/icons'
-import { ChatShareDialog } from '@/components/chat-share-dialog'
+// import { ChatShareDialog } from '@/components/chat-share-dialog'
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger
 } from '@/components/ui/tooltip'
+import { ChatShareDialog } from '../chat-share-dialog'
 
 interface SidebarActionsProps {
   chat: Chat

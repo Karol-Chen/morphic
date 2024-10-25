@@ -2,11 +2,11 @@
 
 // import { Chat } from '@/lib/types'
 // import { AnimatePresence, motion } from 'framer-motion'
+// import { SidebarItem } from './sidebar-item'
+// import { SidebarActions } from './sidebar-actions'
 
 // // import { removeChat, shareChat } from '@/app/actions'
 
-// import { SidebarActions } from '@/components/sidebar-actions'
-// import { SidebarItem } from '@/components/sidebar-item'
 
 // interface SidebarItemsProps {
 //   chats?: Chat[]
@@ -28,11 +28,11 @@
 //               }}
 //             >
 //               <SidebarItem index={index} chat={chat}>
-//                 {/* <SidebarActions
+//                 <SidebarActions
 //                   chat={chat}
-//                   // removeChat={removeChat}
-//                   // shareChat={shareChat}
-//                 /> */}
+//                   removeChat={removeChat}
+//                   shareChat={shareChat}
+//                 />
 //               </SidebarItem>
 //             </motion.div>
 //           )
